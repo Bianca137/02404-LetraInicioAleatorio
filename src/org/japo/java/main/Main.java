@@ -15,15 +15,34 @@
  */
 package org.japo.java.main;
 
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Random;
+
 /**
  *
  * @author Bianca Antonela Glavan - biancaantonela.glavan.alum@iescamp.es
  */
 public class Main {
+
+    public static final Scanner SCN
+            = new Scanner(System.in, "Windows-1252")
+                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
+
+    public static final Random RND = new Random();
+
     public static void main(String[] args) {
-        
-    
-        
+
+        // int balance = RND.nextInt();
+        char letra;
+
+        final char LETRA_INI = 'A';
+        final char LETRA_FIN = 'Z';
+
+        letra = (char) (RND.nextInt(LETRA_FIN - LETRA_INI + 1) + LETRA_INI);
+
+        System.out.printf("Letra de inicio de examen....: %c%n", letra);
+
     }
-    
+
 }
